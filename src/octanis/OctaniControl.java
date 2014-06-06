@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -15,7 +16,7 @@ public class OctaniControl extends OctaniSim{
 
 
 
-    public static void createControl(Date date, int runtime, double lat, double lon, int[] alts) throws IOException{
+    public static void createControl(Calendar date, int runtime, double lat, double lon, int[] alts) throws IOException{
 
         try {
             PrintWriter ControlFile = new PrintWriter(new FileWriter(new File(WORKING_DIR + "CONTROL"), false));
